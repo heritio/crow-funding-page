@@ -581,9 +581,39 @@ body {
   border: 0.15rem solid #3cb4ac;
 }
 
+.selection-modal__pledge--out-of-stock {
+  border: 0.1rem solid #c9c9c9;
+}
+
+.selection-modal__pledge--out-of-stock .selection-modal__radio {
+  cursor: not-allowed;
+}
+
+.selection-modal__pledge--out-of-stock .selection-modal__left-count-amount {
+  color: #7a7a7a;
+}
+
+.selection-modal__pledge--out-of-stock .selection-modal__left-count-small {
+  color: #c2c2c2;
+}
+
+.selection-modal__pledge--out-of-stock .selection-modal__label-span-title {
+  color: #7a7a7a;
+}
+
+.selection-modal__pledge--out-of-stock .selection-modal__label-span-undertitle {
+  color: #93f1eb;
+}
+
+.selection-modal__pledge--out-of-stock .selection-modal__input-border, .selection-modal__pledge--out-of-stock .selection-modal__input-box {
+  display: none;
+}
+
 .selection-modal__radio {
   width: 2rem;
   height: 2rem;
+  -webkit-filter: hue-rotate(-40deg) brightness(130%);
+          filter: hue-rotate(-40deg) brightness(130%);
 }
 
 .selection-modal__input-border {
@@ -650,6 +680,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    font-size: 1.3rem;
   }
   .selection-modal__left-count-desktop-small {
     margin-left: 1rem;
@@ -697,12 +728,16 @@ body {
   padding: 1rem 2rem;
   width: 13rem;
   height: auto;
+  -webkit-transform: scale(1.3) translateX(-1rem);
+          transform: scale(1.3) translateX(-1rem);
 }
 
 @media only screen and (min-width: 45em) {
   .selection-modal__input-box-dispatch-text {
     margin: 0 1rem 0 0;
     width: 9rem;
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
   }
 }
 
@@ -733,6 +768,8 @@ body {
   padding: 1.5rem 2rem;
   width: 50%;
   height: auto;
+  -webkit-transform: scale(1.3) translateX(1rem);
+          transform: scale(1.3) translateX(1rem);
 }
 
 .selection-modal__input-box-dispatch-button:hover {
@@ -742,6 +779,8 @@ body {
 @media only screen and (min-width: 45em) {
   .selection-modal__input-box-dispatch-button {
     width: 9rem;
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
   }
 }
 
@@ -826,5 +865,6 @@ body {
 
 .selection-modal__reward-detail {
   margin: 3rem 0 5rem 0;
+  color: #7a7a7a;
 }
 /*# sourceMappingURL=style.css.map */

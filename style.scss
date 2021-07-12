@@ -495,6 +495,29 @@ body{
 
         &--selected{
             border: .15rem solid hsl(176, 50%, 47%);
+            
+        }
+        &--out-of-stock{
+            border: .1rem solid hsl(0, 0%, 79%);
+            .selection-modal__radio{
+                cursor: not-allowed;
+            }
+            .selection-modal__left-count-amount{
+                color: hsl(0, 0%, 48%);
+            }
+            .selection-modal__left-count-small{
+                color: hsl(0, 0%, 76%);
+            }
+            .selection-modal__label-span-title{
+                color: hsl(0, 0%, 48%);
+            }
+            .selection-modal__label-span-undertitle{
+               color: hsl(176, 77%, 76%);
+            }
+            .selection-modal__input-border,.selection-modal__input-box{
+                display: none;
+            }
+            
         }
     }
 
@@ -504,6 +527,7 @@ body{
     &__radio{
         width: 2rem;
         height: 2rem;
+        filter: hue-rotate(-40deg) brightness(130%);
     }
 
     &__input-border{
@@ -538,8 +562,10 @@ body{
         display: none;
         
             @media only screen and (min-width: 45em)  {
-                display: flex;
+            display: flex;
             align-items: center;
+            font-size: 1.3rem;
+            
             &-small{
                 margin-left: 1rem;
                 font-size: 1.6rem;
@@ -569,9 +595,11 @@ body{
         padding: 1rem 2rem;
         width: 13rem;
         height: auto;
+        transform: scale(1.3) translateX(-1rem);
         @media only screen and (min-width: 45em)  {
             margin: 0 1rem 0 0;
             width: 9rem;
+            transform: scale(1) translateX(0);
           }
     }
     &__input-box-dispatch-input{
@@ -598,11 +626,14 @@ body{
         padding: 1.5rem 2rem;
         width: 50%;
         height: auto;
+        transform: scale(1.3) translateX(1rem);
         &:hover{
             background-color: hsl(176, 51%, 31%);
-           }
-           @media only screen and (min-width: 45em)  {
+        }
+
+        @media only screen and (min-width: 45em)  {
            width: 9rem;
+           transform: scale(1) translateX(0);
           }
            
     }
@@ -649,5 +680,6 @@ body{
 
     &__reward-detail{
         margin: 3rem 0 5rem 0;
+        color: hsl(0, 0%, 48%);
     }
 }
