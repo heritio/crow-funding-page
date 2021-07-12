@@ -25,6 +25,9 @@ body{
     z-index: 99;
    
 }
+.marg-left-13{
+    margin-left: 1.5rem;
+}
 .header{
    
     display: flex;
@@ -233,9 +236,11 @@ body{
        font-weight: 700;
        
        margin-bottom: .8rem;
-       
-       
 
+       &--active{
+           color: hsl(176, 50%, 47%);
+           background-color: rgb(228, 227, 227);
+       }
         @media only screen and (max-width: 45em)  {
            display: none;
           
@@ -250,7 +255,13 @@ body{
 .circle-light{
         fill: hsl(0, 0%, 46%);
 }
+.circle-bookmarked{
+    fill: hsl(176, 50%, 47%);
 
+}
+.path-bookmarked{
+    fill: white;
+}
 .section-2{
     max-width: 100%;
     margin: 2rem auto ;
@@ -274,7 +285,6 @@ body{
     &__stats-info{
       margin: 2rem;
             h1{
-
             }
             p{
                color: hsl(0, 0%, 48%);
@@ -295,7 +305,7 @@ body{
     }
 
     &__status-bar-outer{
-        max-width: 90%;
+        max-width: 85%;
         height: 1rem;
        background: hsl(0, 3%, 92%);
        border-radius: 100px;
@@ -303,10 +313,341 @@ body{
     }
 
     &__status-bar-inner{
-        max-width: 0;
+        
         height: 1rem;
        background: hsl(176, 50%, 47%);
        border-radius: 100px;
        
+    }
+}
+
+
+.section-3{
+ 
+    max-width: 100%;
+    margin: 2rem auto ;
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem 0;
+
+    &__about-title{
+        max-width: 85%;
+        margin: 2rem auto;
+    }
+
+    &__about-info1,&__about-info2{
+        max-width: 85%;
+        margin: 2rem auto;
+        color: hsl(0, 0%, 48%);
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+
+    &__reward{
+        max-width: 85%;
+        margin: 2rem auto;
+        border: 1px solid hsl(0, 0%, 48%);
+        border-radius: 1rem;
+        padding: 2.5rem 2rem;
+
+        &--grayed{
+            h1{
+                color: hsl(0, 0%, 48%);
+            }
+            h3{
+                color: hsl(0, 0%, 48%);
+            }
+            p{
+                color: hsl(0, 4%, 83%);
+            }
+            .pledge{
+                color: hsl(176, 85%, 74%);
+            }
+            button{
+                background: hsl(0, 0%, 79%);
+                cursor: not-allowed;
+                &:hover{
+                    background: hsl(0, 0%, 79%);
+                }
+            }
+        }
+    }
+
+    &__reward-name-box{
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        @media only screen and (min-width: 45em)  {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: start;
+        }
+
+        p{
+          margin-top: .5rem;
+          color: hsl(176, 50%, 47%);
+        }
+    }
+    &__reward-text{
+        color: hsl(0, 0%, 48%);
+        margin: 1.5rem auto;
+        font-size: 1.4rem;
+        line-height: 1.8;
+    }
+
+    &__reward-left{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2.5rem;
+        p{
+            margin-left: .7rem;
+            color: hsl(0, 0%, 48%);
+        }
+    }
+
+    &__reward-btn-box{
+        display: flex;
+        flex-direction: column;
+        @media only screen and (min-width: 45em)  {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: start;
+         }
+    }
+
+    &__reward-button{
+        max-width: 13rem;
+        height: 5rem;
+        border: none;
+        border-radius: 10rem;
+        font-weight: 700;
+        color: white;
+        background: hsl(176, 50%, 47%);
+        padding: 0 1.5rem;
+        margin-top: 2.5rem;
+        cursor: pointer;
+        &:hover,&:active{
+            background: hsl(176, 72%, 28%);
+        }
+
+        @media only screen and (min-width: 45em)  {
+            padding: 0 1.5rem;
+            font-size: 1.2rem;
+            height: 4rem;
+         }
+    }
+
+    
+
+
+}
+
+.content-container-2{
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+}
+.selection-modal{
+   padding: 3rem 0;
+    
+    max-width: 85%;
+    margin: 11rem auto 0 auto;
+    border-radius: .7rem;
+    background: white;
+    
+    
+    box-shadow: 0 0 0 100vw rgba(0,0,0,.5);
+
+    @media only screen and (min-width: 45em)  {
+        max-width: 55%;
+        margin: 16rem auto 0 auto;
+    }
+   
+    &__title-close{
+        max-width: 85%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 2rem 0;
+
+    }
+    &__close{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    
+
+    &__small-title{
+        max-width: 85%;
+        margin: 0 auto 2rem auto;
+    }
+    &__pledge{
+        max-width: 85%;
+        margin: 3rem auto;
+        padding: 2rem 1.5rem;
+        border-radius: 1.5rem;
+        border: .1rem solid hsl(0, 0%, 48%);
+
+        &--selected{
+            border: .15rem solid hsl(176, 50%, 47%);
+        }
+    }
+
+    &__label{
+        
+    }
+    &__radio{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &__input-border{
+    
+        margin: 2rem -1.5rem;
+        border-top: .1rem solid hsl(0, 0%, 48%);
+    }
+
+    &__input-box{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        @media only screen and (min-width: 45em)  {
+            flex-direction: row;
+         }
+    }
+    &__left-count{
+        display: flex;
+        align-items: center;
+        &-small{
+            margin-left: 1rem;
+            font-size: 1.6rem;
+            color: hsl(0, 0%, 48%);
+        }
+        @media only screen and (min-width: 45em)  {
+            display: none;
+          }
+    }
+    &__left-count-desktop{
+        display: none;
+        
+            @media only screen and (min-width: 45em)  {
+                display: flex;
+            align-items: center;
+            &-small{
+                margin-left: 1rem;
+                font-size: 1.6rem;
+                color: hsl(0, 0%, 48%);
+            }
+        }
+    }
+    &__input-box-dispatch{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         align-items: center;
+
+         &-dolla{
+             color: hsl(0, 0%, 48%);
+         }
+        
+    }
+    &__input-box-dispatch-text{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: .1rem solid hsl(0, 0%, 48%);
+        border-radius: 10rem;
+        margin: 0 1rem;
+        padding: 1rem 2rem;
+        width: 13rem;
+        height: auto;
+        @media only screen and (min-width: 45em)  {
+            margin: 0 1rem 0 0;
+            width: 9rem;
+          }
+    }
+    &__input-box-dispatch-input{
+        width: 80%;
+        outline: none;
+        border: none;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-left: 1rem;
+
+        @media only screen and (min-width: 45em)  {
+            margin: 0;
+          }
+    }
+    &__input-box-dispatch-button{
+        padding: 1.9rem 1.3rem;
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 10rem;
+        border: none;
+        background:  hsl(176, 50%, 47%);
+        color: white;
+        cursor: pointer;
+        padding: 1.5rem 2rem;
+        width: 50%;
+        height: auto;
+        &:hover{
+            background-color: hsl(176, 51%, 31%);
+           }
+           @media only screen and (min-width: 45em)  {
+           width: 9rem;
+          }
+           
+    }
+    &__input-box-title{
+        margin-bottom: 4rem;
+
+
+        @media only screen and (min-width: 45em)  {
+           margin: 0;
+         }
+    }
+    &__label{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__reward-name{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__label-span{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: .8rem;
+        @media only screen and (min-width: 45em)  {
+            flex-direction: row;
+            align-items: center;
+          }
+    }
+    &__label-span-undertitle{
+        margin-top: .5rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: hsl(176, 50%, 47%);
+        @media only screen and (min-width: 45em)  {
+            margin-left: .5rem;
+            margin-top: 0;
+          }
+    }
+
+    &__reward-detail{
+        margin: 3rem 0 5rem 0;
     }
 }
