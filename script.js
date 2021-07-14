@@ -210,8 +210,46 @@ backProjectBtn.addEventListener("click", ()=>{
 
 //
 //
-//
+//Checkbox change event listener
 
+noRewardPledge.addEventListener("change", ()=>{
+    if(noRewardPledge.checked == true){
+       
+        bamboPledgeModal.classList.remove("selection-modal__pledge--selected"); 
+        blackEditionPledgeModal.classList.remove("selection-modal__pledge--selected"); 
+        
+        bamboPledgeModal.classList.add("selection-modal__pledge--not-selected");
+        blackEditionPledgeModal.classList.add("selection-modal__pledge--not-selected");
+              
+        
+        noRewardPledgeModal.classList.remove("selection-modal__pledge--not-selected");
+        noRewardPledgeModal.classList.add("selection-modal__pledge--selected");
+    }
+})
 
+bamboPledge.addEventListener("change", ()=>{
+    if(bamboPledge.checked == true){
+       blackEditionPledgeModal.classList.remove("selection-modal__pledge--selected");          
+        noRewardPledgeModal.classList.remove("selection-modal__pledge--selected");
+       
+        noRewardPledgeModal.classList.add("selection-modal__pledge--not-selected");
+        blackEditionPledgeModal.classList.add("selection-modal__pledge--not-selected");
 
+        bamboPledgeModal.classList.remove("selection-modal__pledge--not-selected");
+        bamboPledgeModal.classList.add("selection-modal__pledge--selected");
+    }
+})
 
+blackEditionPledge.addEventListener("change", ()=>{
+    if(blackEditionPledge.checked == true){
+            bamboPledgeModal.classList.remove("selection-modal__pledge--selected");          
+            noRewardPledgeModal.classList.remove("selection-modal__pledge--selected");
+                   
+            bamboPledgeModal.classList.add("selection-modal__pledge--not-selected");
+          
+            noRewardPledgeModal.classList.add("selection-modal__pledge--not-selected");
+
+        blackEditionPledgeModal.classList.remove("selection-modal__pledge--not-selected");
+        blackEditionPledgeModal.classList.add("selection-modal__pledge--selected");
+    }
+})
