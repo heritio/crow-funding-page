@@ -59,7 +59,7 @@
     <div class="section-2">
         <div class="section-2__stats ">
           <div class="section-2__stats-info">
-            <h1 >$89,914</h1>
+            <h1 class="section-2__stats-backed"></h1>
             <p>of $100,000 backed</p>
           </div>
           <div class="section-2__stats-info section-2__stats-info--middle">
@@ -104,10 +104,10 @@
          </p>
          <div class="section-3__reward-btn-box">
            <div class="section-3__reward-left">
-             <h1>101</h1>
+             <h1 class="bambo-stand-left"></h1>
              <p>left</p>
            </div>
-           <button class="section-3__reward-button">Select Reward</button>
+           <button class="section-3__reward-button-bambo-stand section-3__reward-button">Select Reward</button>
          </div>
        </div>
        <div class="section-3__reward">
@@ -121,10 +121,10 @@
         </p>
         <div class="section-3__reward-btn-box">
           <div class="section-3__reward-left">
-            <h1>64</h1>
+            <h1 class="black-edition-left"></h1>
             <p>left</p>
           </div>
-          <button class="section-3__reward-button">Select Reward</button>
+          <button class="section-3__reward-button-black-edition section-3__reward-button">Select Reward</button>
         </div>
        </div>
        <div class="section-3__reward section-3__reward--grayed">
@@ -148,7 +148,7 @@
     </div>  
    </div>
   
-   <div class="content-container-2">
+   <div class="content-container-2 hide-container">
             <div class="selection-modal">
               <div class="selection-modal__title-close">
                 <h3 class="selection-modal__title">
@@ -160,9 +160,9 @@
                 Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
               </p>
               
-              <div class="selection-modal__pledge">
+              <div class="modal-no-reward selection-modal__pledge selection-modal__pledge--not-selected ">
                 <label class="selection-modal__label" for="pledge-with-no-reward">
-                  <input class="selection-modal__radio" type="radio" name="pledge-with-no-reward" id="pledge-with-no-reward">
+                  <input class="selection-modal__radio selection-modal__radio--no-pledge" type="radio" name="pledge-with-no-reward" id="pledge-with-no-reward">
                   <span class="radio-costum"></span>
                   <h4 class="selection-modal__label-span-title marg-left-13">Pledge with no reward </h4>  
                 </label>
@@ -177,18 +177,18 @@
                   <div class="selection-modal__input-box-dispatch">
                     <div class="selection-modal__input-box-dispatch-text">
                       <h5 class="selection-modal__input-box-dispatch-dolla">$</h5>
-                      <input class="selection-modal__input-box-dispatch-input" type="text" name="" id="">
+                      <input class="selection-modal__input-box-dispatch-input no-reward-input" type="text" name="" id="">
                     </div>
-                    <button class="selection-modal__input-box-dispatch-button">Continue</button>
+                    <button class="selection-modal__input-box-dispatch-button no-reward-input-btn">Continue</button>
                   </div>
                 </div>
               </div>
 
 
-              <div class="selection-modal__pledge selection-modal__pledge--selected">
+              <div class="modal-bambo-stand selection-modal__pledge selection-modal__pledge--not-selected">
                 <div class="selection-modal__reward-name">
                 <label class="selection-modal__label" for="bambo-stand">
-                  <input  class="selection-modal__radio" type="radio" name="pledge-with-no-reward" id="bambo-stand">
+                  <input  class="selection-modal__radio selection-modal__radio--bambo" type="radio" name="pledge-with-no-reward" id="bambo-stand">
                   <span class="selection-modal__radio-costum"></span>
                   <span class="selection-modal__label-span">
                     <h4 class="selection-modal__label-span-title">Bamboo Stand</h4>
@@ -197,7 +197,7 @@
                     
                 </label>
                 <div class="selection-modal__left-count-desktop">
-                  <h2 class="selection-modal__left-count-amount">101</h2>
+                  <h2 class="selection-modal__left-count-amount bambo-stand-left">101</h2>
                   <small class="selection-modal__left-count-small">left</small>
                 </div> 
 
@@ -208,7 +208,7 @@
                   you’ll be added to a special Backer member list.
                 </p>
                 <div class="selection-modal__left-count">
-                  <h2 class="selection-modal__left-count-amount">101</h2>
+                  <h2 class="selection-modal__left-count-amount bambo-stand-left">101</h2>
                   <small class="selection-modal__left-count-small">left</small>
                 </div> 
                 <div class="selection-modal__input-border"></div>
@@ -217,19 +217,19 @@
                   <div class="selection-modal__input-box-dispatch">
                     <div class="selection-modal__input-box-dispatch-text">
                       <h5 class="selection-modal__input-box-dispatch-dolla">$</h5>
-                      <input class="selection-modal__input-box-dispatch-input" type="text" name="" id="">
+                      <input value="25" min="25" class="selection-modal__input-box-dispatch-input bambo-pledge-input" placeholder="25" type="number" name="" id="">
                     </div>
-                    <button class="selection-modal__input-box-dispatch-button">Continue</button>
+                    <button class="selection-modal__input-box-dispatch-button bambo-pledge-input-btn">Continue</button>
                   </div>
                 </div>
               </div>
 
 
 
-              <div class="selection-modal__pledge selection-modal__pledge--selected">
+              <div class="modal-black-edition selection-modal__pledge selection-modal__pledge--not-selected">
                 <div class="selection-modal__reward-name">
                 <label class="selection-modal__label" for="bambo-stand">
-                  <input  class="selection-modal__radio" type="radio" name="pledge-with-no-reward" id="bambo-stand">
+                  <input  class="selection-modal__radio selection-modal__radio--black-edition" type="radio" name="pledge-with-no-reward" id="bambo-stand">
                   <span class="selection-modal__radio-costum"></span>
                   <span class="selection-modal__label-span">
                     <h4 class="selection-modal__label-span-title">Black Edition Stand</h4>
@@ -238,7 +238,7 @@
                     
                 </label>
                 <div class="selection-modal__left-count-desktop">
-                  <h2 class="selection-modal__left-count-amount">64</h2>
+                  <h2 class="selection-modal__left-count-amount black-edition-left">64</h2>
                   <small class="selection-modal__left-count-small">left</small>
                 </div> 
 
@@ -249,7 +249,7 @@
                   member list. Shipping is included.
                 </p>
                 <div class="selection-modal__left-count">
-                  <h2 class="selection-modal__left-count-amount">64</h2>
+                  <h2 class="selection-modal__left-count-amount black-edition-left">64</h2>
                   <small class="selection-modal__left-count-small">left</small>
                 </div> 
                 <div class="selection-modal__input-border"></div>
@@ -258,9 +258,9 @@
                   <div class="selection-modal__input-box-dispatch">
                     <div class="selection-modal__input-box-dispatch-text">
                       <h5 class="selection-modal__input-box-dispatch-dolla">$</h5>
-                      <input class="selection-modal__input-box-dispatch-input" type="text" name="" id="">
+                      <input value="75" min="75" class="selection-modal__input-box-dispatch-input black-edition-input" placeholder="75" type="number" name="" id="">
                     </div>
-                    <button class="selection-modal__input-box-dispatch-button">Continue</button>
+                    <button class="selection-modal__input-box-dispatch-button black-edition-input-btn">Continue</button>
                   </div>
                 </div>
               </div>
@@ -308,43 +308,23 @@
           </div>
    </div>
    
-   
-  <!-- Selection modal start -->
+   <div class="content-container-3 hide-container">
 
-  <!-- Selected pledge start -->
-  
-  <!-- Selected pledge end -->
+    <div class="completed-modal">
+      <img class="completed-modal__img" src="./images/icon-check.svg" alt="icon-check">
+      <h3 class="completed-modal__title">Thanks for your support!</h3>
+      <p class="completed-modal__text">
+        Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+        an email once our campaign is completed.
+      </p>
+      <button class="completed-modal__button">
+        Got it!
+      </button>
+        
+    </div>
 
-  
 
-  <!-- Selected pledge start -->
-  Enter your pledge
-  $75
-  Continue
-  <!-- Selected pledge end -->
-
-  Mahogany Special Edition
-  Pledge $200 or more
-  You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-  to our Backer member list. Shipping is included.
-  0 left
-
-  <!-- Selected pledge  start -->
-  Enter your pledge
-  $200
-  Continue
-  <!-- Selected pledge end -->
-
-  <!-- Selection modal end -->
-
-  <!-- Success modal start -->
-
-  Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
-  Got it!
-
-  <!-- Success modal end -->
+   </div>
 
   <script src="script.js"></script>
 </body>
